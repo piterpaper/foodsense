@@ -15,33 +15,55 @@
 
         <!-- main section    -->
         <main>
-
-            <section class="nonslider">
-
-                <div class="baner">
-                    <h1>Share your Foor Sence</h1>
-                    <h3>Submit yout favorite recipes, become a contributor, or get interviewed.</h3>
-                </div>
-                <div class="tabs">
-                    <div class="tab-item-large-active">
-                        <p><span>Tastemakers</span></p>
-                        <p class="hover">Feast your eyes & get reciepes!</p>
-                    </div>
-                    <div class="tab-item-large-active">
-                        <p><span>Blog</span></p>
-                        <p class="hover">News, how-tos, stories, and more</p>
-                    </div>
-                    <div class="tab-item-large-active">
-                        <p><span>The A-List</span></p>
-                        <p class="hover">Handpicked, absolute favorites</p>
-                    </div>
-                    <div class="tab-item-large-active active">
-                        <p><span>Contribute</span></p>
-                        <p class="hover">We want to hear from you!</p>
+            <section class="slider">
+                <div class="wraper" id="tab1">
+                    <div class="tabs-content-one">
+                        <h1>Share your Foor Sence</h1>
+                        <h3>Submit yout favorite recipes, become a contributor, or get interviewed.</h3>
                     </div>
                 </div>
-
+                <div class="wraper" id="tab2">
+                    <div class="tabs-content-two">
+                        <h1>Share your Foor Sence</h1>
+                        <h3>Submit yout favorite recipes, become a contributor, or get interviewed.</h3>
+                    </div>
+                </div>
+                <div class="wraper" id="tab3">
+                    <div class="tabs-content-three">
+                        <h1>Share your Foor Sence</h1>
+                        <h3>Submit yout favorite recipes, become a contributor, or get interviewed.</h3>
+                    </div>
+                </div>
+                <div class="wraper" id="tab4">
+                    <div class="tabs-content-four">
+                        <h1>Share your Foor Sence</h1>
+                        <h3>Submit yout favorite recipes, become a contributor, or get interviewed.</h3>
+                    </div>
+                </div>
             </section>
+            <div class="slider-mobil-buttons">
+                <div class="prev-button">&#8592;</div>
+                <div class="next-button">&#8594;</div>
+            </div>
+            <!-- табы  -->
+            <div class="tabs">
+                <div class="tab-item-large-active" data-tab="#tab1">
+                    <p><span>Tastemakers</span></p>
+                    <p class="hover">Feast your eyes & get reciepes!</p>
+                </div>
+                <div class="tab-item-large-active" data-tab="#tab2">
+                    <p><span>Blog</span></p>
+                    <p class="hover">News, how-tos, stories, and more</p>
+                </div>
+                <div class="tab-item-large-active" data-tab="#tab3">
+                    <p><span>The A-List</span></p>
+                    <p class="hover">Handpicked, absolute favorites</p>
+                </div>
+                <div class="tab-item-large-active activate" data-tab="#tab4">
+                    <p><span>Contribute</span></p>
+                    <p class="hover">We want to hear from you!</p>
+                </div>
+            </div>
             <!-- mail-box -->
             <section class="subscribe-box">
                 <div class="mail">
@@ -212,7 +234,7 @@
     </footer>
 
 
-
+    <script src="./source/slider.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,3 @@
-:root {
-  --white: #fff;
-  --light: #EFF8F7;
-  --light-active: #D9EFEC;
-  --primary: #34ACA7;
-  --dark: #000000;
-  --smokie: #E5E5E5;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -110,24 +101,68 @@ main {
   flex-direction: row-reverse;
 }
 
-.nonslider {
+.slider {
   width: 100%;
-  height: 69vh;
+  height: 100%;
   background-color: #34ACA7;
   background-repeat: no-repeat;
 }
 
-.baner {
-  background-image: url("../img/logo.jpg");
+.wraper {
+  display: none;
+}
+
+.wraper.active {
+  display: block;
+  transition: 1s ease-in-out;
+}
+
+.wraper {
   width: 100%;
   height: 100%;
+}
+.wraper .tabs-content-one {
+  background-image: url("/img/btn1.jpg");
+  width: 100%;
+  height: 63vh;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.baner h1 {
+.wraper .tabs-content-two {
+  background-image: url("/img/btn2.jpg");
+  width: 100%;
+  height: 63vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wraper .tabs-content-three {
+  background-image: url("/img/btn3.jpg");
+  width: 100%;
+  height: 63vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wraper .tabs-content-four {
+  background-image: url("/img/logo.jpg");
+  width: 100%;
+  height: 63vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wraper h1 {
+  text-align: center;
   padding: 10px;
   width: 272px;
   height: 49px;
@@ -139,7 +174,7 @@ main {
   color: #000000;
   background-color: #ffffffff;
 }
-.baner h3 {
+.wraper h3 {
   width: 487px;
   height: 42px;
   font-family: "Arial";
@@ -158,7 +193,6 @@ main {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
   align-content: center;
   background-color: #EFF8F7;
@@ -188,7 +222,7 @@ main {
 /*               mail section                */
 .subscribe-box {
   display: flex;
-  margin-top: 8rem;
+  margin-top: 2rem;
   border-top: 1px dashed #E5E5E5;
   border-bottom: 1px dashed #E5E5E5;
   align-content: center;
@@ -308,6 +342,10 @@ footer {
   width: 32px;
 }
 
+.slider-mobil-buttons {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
   .tab-item-large-active p:nth-child(2) {
     display: none;
@@ -326,12 +364,8 @@ footer {
     width: 487px;
   }
 
-  .subscribe-box {
-    margin-top: 4rem !important;
-  }
-
-  .nonslider {
-    height: 50vh;
+  .slider {
+    height: 63vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -340,22 +374,9 @@ footer {
     margin-top: 2rem;
   }
 
-  .nonslider {
+  .slider {
+    margin-top: 2rem;
     background-color: #ffffffff;
-  }
-
-  .baner h1 {
-    padding: 7px;
-    width: 38vw;
-    font-size: 16px;
-    height: 34px;
-  }
-
-  .baner h3 {
-    width: 67vw;
-    height: 40px;
-    font-size: 13px;
-    padding: 10px;
   }
 
   .main-section {
@@ -377,11 +398,12 @@ footer {
   }
 
   .aside-menu {
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -400,15 +422,63 @@ footer {
   }
 
   .aside-menu .aside-menu-item a {
+    margin-top: 5px;
     margin-left: 0;
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .wraper h1 {
+    padding: 12px;
+    width: 190px;
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .wraper h3 {
+    width: 378px;
+    height: 40px;
+    font-size: 11px;
+    line-height: 14px;
   }
 }
-@media screen and (min-width: 488px) and (max-width: 555px) {
-  .baner {
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    margin-top: -2rem;
+@media screen and (min-width: 487px) and (max-width: 555px) {
+  .wraper .active-sliders-opacity {
+    opacity: 0;
+  }
+
+  .slider-mobil-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+  }
+  .slider-mobil-buttons .prev-button {
+    border: 1px solid;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .slider-mobil-buttons .next-button {
+    border: 1px solid;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .wraper h3 {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    padding: 13px;
+    margin-bottom: 0;
+  }
+
+  .wraper h1 {
+    text-align: start;
+    opacity: 0.7;
+    width: 100%;
   }
 
   .tabs {
@@ -416,7 +486,7 @@ footer {
   }
 
   .subscribe-box {
-    margin-top: 0px !important;
+    margin-top: 2rem;
   }
 
   .aside-menu-item img {
@@ -433,19 +503,6 @@ footer {
 
   .tab-item-large-active span {
     font-size: 13px;
-  }
-
-  .baner h3 {
-    width: 100%;
-    height: 40px;
-    font-size: 11px;
-    padding: 10px;
-    margin-bottom: 0;
-  }
-
-  .baner h1 {
-    opacity: 0.7;
-    width: 100%;
   }
 
   .subscribe-box {
@@ -518,10 +575,36 @@ footer {
 }
 
 @media screen and (max-width: 487px) {
-  .baner {
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    margin-top: -1.5rem;
+  .wraper .active-sliders-opacity {
+    opacity: 0;
+  }
+
+  .slider {
+    overflow: hidden;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+  }
+
+  .slider-mobil-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+  }
+  .slider-mobil-buttons .prev-button {
+    border: 1px solid;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .slider-mobil-buttons .next-button {
+    border: 1px solid;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
   }
 
   .tabs {
@@ -529,7 +612,7 @@ footer {
   }
 
   .subscribe-box {
-    margin-top: 0px !important;
+    margin-top: 2rem;
   }
 
   .cards .card-large {
@@ -577,15 +660,16 @@ footer {
     font-size: 13px;
   }
 
-  .baner h3 {
+  .wraper h3 {
     width: 100%;
-    height: 40px;
-    font-size: 11px;
-    padding: 10px;
+    height: 42px;
+    font-size: 10px;
+    padding: 14px;
     margin-bottom: 0;
   }
 
-  .baner h1 {
+  .wraper h1 {
+    text-align: start;
     opacity: 0.7;
     width: 100%;
   }
