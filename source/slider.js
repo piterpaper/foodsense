@@ -31,13 +31,10 @@ let current = 0;
 
 function slider() {
     for (let i = 0; i < sliders.length; i++) {
-        sliders[current].classList.remove('active-sliders-opacity');
-        sliders[i].classList.add('active-sliders-opacity');
+        sliders[i].classList.add('active-sliders');
     }
-
+    sliders[current].classList.remove('active-sliders');
 }
-
-document.querySelector('.wraper').onclick = slider;
 
 const sliderButtonPrev = document.querySelector('.prev-button').onclick = function() {
 

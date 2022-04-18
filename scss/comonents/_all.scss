@@ -119,7 +119,7 @@ main {
 
 .wraper.active {
     display: block;
-    transition: 1s ease-in-out;
+    // transition: 1s ease-in-out;
 }
 
 .wraper {
@@ -445,7 +445,7 @@ footer {
 }
 
 @media screen and (min-width: 487px) and (max-width: 555px) {
-    .wraper .active-sliders-opacity {
+    .wraper.active-sliders {
         opacity: 0;
     }
     .slider-mobil-buttons {
@@ -563,7 +563,7 @@ footer {
 }
 
 @media screen and (max-width: 487px) {
-    .wraper .active-sliders-opacity {
+    .wraper.active-sliders {
         opacity: 0;
     }
     .slider {
